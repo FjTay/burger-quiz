@@ -1,0 +1,165 @@
+/* //////////////////// BURGER, PICK AND LABEL FOR PSEUDO /////////////////////// */
+#pick {
+    height: 50%;
+    max-height: 200px;
+    width: 0.3rem;
+    background: rgb(231, 231, 139);
+    -ms-transform: rotate(20deg);
+    transform: rotate(20deg);
+    animation: pickMove calc(var(--animationRate) * 2) 1;
+    position: relative;
+    top: 7vh;
+}
+
+#burgerContainer, #burgerContainer2 {
+    width: 100vw;
+    height: auto;
+}
+
+.label {
+    background: var(--labels);
+    outline-offset: -0.5rem;
+    outline: 0.2rem dashed var(--mainBackGround);
+}
+
+#pseudoLabel {
+    outline: 0.2rem dashed var(--mainBackGround);
+    width: calc(var(--widthSize) * 0.7);
+    height: calc(var(--heightSize) * 8);
+    font-size: var(--fontSize);
+    margin-top: 0.3rem;
+}
+
+input {
+    background: rgb(238, 238, 238);
+    height : calc(var(--heightSize) * 1.5)
+}
+
+.seed {
+    width: 0.5rem;
+    height: 0.2rem;
+    background: rgb(231, 231, 139);
+    border-radius: 100%;
+    position: relative;
+}
+
+.seed:nth-child(1) {
+    margin-left: calc(var(--widthSize) / 5);
+}
+
+.seed:nth-child(2) {
+    margin-left: calc(var(--widthSize) / 1.5);
+}
+
+.seed:nth-child(3) {
+    margin-left: calc(var(--widthSize) / 2.5);
+}
+
+.seed:nth-child(4) {
+    margin-left: calc(var(--widthSize) / 1.8);
+}
+
+.seed:nth-child(5) {
+    margin-left: calc(var(--widthSize) / 1.2);
+}
+
+.seed:nth-child(6) {
+    margin-left: calc(var(--widthSize) / 1.5);
+}
+
+.seed:nth-child(7) {
+    margin-left: calc(var(--widthSize) / 3.2);
+}
+
+.seed:nth-child(8) {
+    margin-left: calc(var(--widthSize) / 4.3);
+}
+
+.seed:nth-child(9) {
+    margin-left: calc(var(--widthSize) / 2.4);
+}
+
+.seed:nth-child(10) {
+    margin-left: calc(var(--widthSize) / 1.1);
+}
+
+@keyframes pickMove {
+    from {
+        top: -100vh;
+    }
+
+    to {
+        top: 5vh;
+    }
+}
+
+#breadTop,
+#breadBottom {
+    width: var(--widthSize);
+}
+
+#breadTop {
+    height: calc(var(--heightSize) * 5.5);
+    border-radius: 10rem 10rem 3rem 3rem;
+    background: rgb(219, 143, 2);
+    background: linear-gradient(0deg, rgba(219, 143, 2, 1) 24%, rgba(219, 60, 2, 1) 88%);
+}
+
+#breadBottom {
+    height: calc(var(--heightSize) * 3.5);
+    border-radius: 2rem 2rem 4.5rem 4.5rem;
+    background: rgb(219, 60, 2);
+    background: linear-gradient(0deg, rgba(219, 60, 2, 1) 24%, rgba(219, 143, 2, 1) 86%);
+}
+
+.salad,
+.cheese,
+.tomato,
+.bacon {
+    border-radius: 0.3rem;
+    width: calc(var(--widthSize) * 0.9);
+    height: calc(var(--heightSize) * 0.5);
+}
+
+.cheese {
+    background: rgb(255, 174, 0);
+}
+
+.bacon {
+    background: rgb(161, 43, 35);
+}
+
+.tomato {
+    background: red;
+    height: calc(var(--heightSize) * 0.8);
+}
+
+.salad {
+    background: green;
+}
+
+.steak {
+    width: var(--widthSize);
+    height: calc(var(--heightSize) * 2.5);
+    background: rgb(135, 36, 0);
+    background: linear-gradient(0deg, rgba(135, 36, 0, 1) 24%, rgba(58, 0, 0, 1) 86%);
+    border-radius: 1rem;
+}
+
+.burger {
+    margin-left: 200vw;
+    margin-top: 0.1rem;
+}
+
+.validatePseudo {
+    min-width: calc(var(--widthSize) * 1.2);
+    min-height: calc(var(--heightSize) * 5);
+    background: rgb(15, 15, 15);
+    border-radius: 2rem;
+    margin-top: calc(var(--heightSize));
+    color: var(--plasticWhite);
+}
+
+.validatePseudo:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,338 @@
+:root {
+    --widthSize: 15rem;
+    --heightSize: 0.75rem;
+    --animationRate: 400ms;
+    --mainBackGround: rgb(39, 39, 39);
+    --plasticWhite: blanchedalmond;
+    --sauce1: rgb(179, 55, 33);
+    --sauce2: rgb(255, 102, 14);
+    --sauce3: rgba(236, 213, 8, 0.884);
+    --labels: rgb(230, 229, 202);
+    --fontSize: 1.2rem;
+}
+/* ////////////////////////// PURE HTML-DOM ELEMENTS //////////////// */
+* {
+    font-weight: 900;
+}
+
+body {
+    /* background: purple; */
+    background: var(--mainBackGround);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Noto Sans Mono', monospace;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    font-weight: 900;
+}
+
+main {
+    /* background: lightseagreen; */
+    width: 100vw;
+    height: calc(100vh - var(--heightSize) * 5);
+    min-height: 30rem;
+}
+
+header {
+    /* background: red; */
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--plasticWhite);
+    border-bottom: 1px;
+    border-bottom-color: var(--plasticWhite);
+    border-bottom-style: solid;
+    height: calc(var(--heightSize) * 5);
+}
+
+section, header{
+    width: 100vw;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    height : 100%;
+    /* background: lightgreen; */
+}
+
+label,
+input {
+    width: 80%;
+    margin: 0;
+    padding: 0;
+}
+
+footer {
+    /* background: red; */
+    margin-top: var(--heightSize);
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 4vw;
+    color: var(--plasticWhite);
+}
+
+button {
+    opacity: 0;
+    background-color: var(--plasticWhite);
+    font-family: 'Noto Sans Mono', monospace;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--mainBackGround);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+/* ///////////////////////// MULTIPLE TYPE SELECTORS ///////////////////// */
+#headerTitle,
+img {
+    margin-left: 3vw;
+}
+
+img{
+    height: 80%;
+}
+
+#burgerContainer,
+#burgerContainer2,
+#label,
+section,
+#breadBottom,
+.validatePseudo,
+#readyLabel,
+#pseudoLabel, #fk, #quizz-container, #scoreLabel, #byeMsg{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+/* ///////////////////////////// Welcome part ///////////////////// */
+
+/* ///////////////////////// READY SECTION ///////////////////////// */
+#game {
+    width: 100%;
+    height: auto;
+}
+
+#readyLabel, #byeMsg {
+    width: 100%;
+    height: calc(var(--heightSize) * 7);
+}
+
+#readyTop, #readyBottom {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+#readyTop {
+    /* background: cyan; */
+    align-items: flex-end;
+}
+
+#readyBottom {
+    /* background: lightpink; */
+    align-items: flex-start;
+}
+
+.readyButton {
+    width: calc(var(--widthSize) / 2);
+    height: calc(var(--heightSize) * 7);
+    border: var(--heightSize) solid var(--plasticWhite);;
+    margin : var(--heightSize);
+    border-radius: 0 20px 20px 20px;
+    opacity: 1;
+    font-size: var(--fontSize);
+}
+
+.readyButton:nth-child(1) {
+    background: var(--sauce1);  
+}
+
+.readyButton:nth-child(1)::before{
+    content: "YES"
+}
+
+.readyButton:nth-child(2) {
+    background: var(--sauce2);
+}
+
+.readyButton:nth-child(2)::before{
+    content: "NO"
+}
+
+.readyButton:nth-child(3) {
+    background: var(--sauce3); 
+}
+
+.readyButton:nth-child(3)::before{
+    content: "赫级"
+}
+
+/* //////////////// CLASSES RELATIVE TO THE GAME PART ///////////////// */
+#quizz-container, #bye {
+    height: 100%;
+    width: 100%;
+}
+
+#container-question, #container-buttons, #score, #timer, #questionNbr, #questionToAsk {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#container-question, #container-buttons {
+    width: 100%;
+    height: 50%;
+    color: var(--plasticWhite);
+}
+
+#container-question {
+    /* background: cyan; */
+}
+
+#container-buttons {
+    /* background: lightpink; */
+    margin-top: calc(var(--heightSize) * 1.5);
+}
+
+.quizzButton, #replay, #fk {
+    width: 80%;
+    height: calc(var(--heightSize) * 3.5);
+    /* background: lightgreen; */
+    border-radius: 1rem;
+    margin-bottom : 7px;
+    transition: all var(--animationRate);
+    opacity: 1;
+}
+
+#questionToAsk{
+    height: calc(var(--heightSize) * 12);
+    width: 100%;
+    min-height: auto;
+    border-bottom: 3px solid var(--plasticWhite);
+    background: black;
+    transition: all var(--animationRate);
+}
+
+#score, #timer, #questionNbr {
+    width: 50%;
+    height: auto;
+    /* background: lightgreen; */
+    border-radius: 1rem;
+    margin-top: var(--heightSize);
+}
+
+#questionNbr {
+    font-size: 1.5rem;
+}
+
+#score, #timer {
+    font-size: var(--fontSize);
+}
+
+#timer{
+    margin-bottom: var(--heightSize);
+}
+
+/* CLASSES FOR TOGGLING AND FADEIN-FADEOUT EFFECTS */
+.unShadowed{
+    opacity: 1;
+    transition: all var(--animationRate);
+}
+
+.shadowed{
+    opacity: 0;
+    transition: all var(--animationRate);
+}
+
+.centered {
+    margin-left: 0vw;
+    transition: all var(--animationRate);
+}
+
+.burgerLeft {
+    margin-left : -250vw;
+    transition: all var(--animationRate);
+}
+
+.burgerRight {
+    margin-left : 250vw;
+    transition: all var(--animationRate);
+}
+
+.hidden {
+    display: none;
+}
+/* //////////////////////////// partie FINISH /////////////////// */
+#finish {
+    /* background: lightsalmon; */
+    /* opacity : 1; */
+}
+
+#replay, #fk {
+    opacity: 1;
+}
+
+#scoreLabel {
+    width: 100%;
+    height: 20%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+/* ////////////////partie BYE /////////////// */
+#byeMsg {
+    outline: none;
+    color: var(--plasticWhite);
+    background: transparent;
+}
+
+@media (orientation: landscape) {
+    #container-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 50px;
+    }
+
+    .quizzButton, #questionToAsk {
+        width: 100%;
+        margin: auto;
+    }
+
+    .quizzButton {
+        height: calc(var(--heightSize) * 6);
+        font-size: var(--fontSize);
+    }
+
+    #questionToAsk {
+        font-size: var(--fontSize);
+    }
+
+    #container-buttons{
+        margin-top: 5rem;
+        width: 50%;
+    }
+
+    #replay, #fk {
+        width: 30%;
+    }
+  }

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>++ Paname QuiZzZ ++</title>
+    <link rel="stylesheet" href="burger.css">
+    <link rel="stylesheet" href="welcome.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@300&display=swap');
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="logoBurger.png" alt="logoBurger">
+        <h2 id=headerTitle>
+            PANAME QUIZ
+        </h2>
+    </header>
+
+    <main>
+        <section id="welcome">
+            <div id="pick">
+                <div id="pseudoLabel" class="label">
+                    <label>Tape ton pseudo...</label>
+                    <input placeholder="...ici">
+                </div>
+            </div>
+            <div id="burgerContainer"></div>
+            <div class="burger validatePseudo">...et après clique ici</div>
+        </section>
+        <section id="ready" class="hidden">
+            <div id="readyTop">
+                <div class="label" id="readyLabel"></div>
+            </div>
+            <div id="readyBottom"></div>
+        </section>
+        <section id="game" class="hidden">
+            <div id="quizz-container">
+                <div id="container-question">
+                    <div id="questionToAsk">
+                        <div id="questionitSelf" class="shadowed"></div>
+                    </div>
+                    <div id="questionNbr">Question n°1</div>
+                    <div id="score">Ton score : 0</div>
+                    <div id="timer" class="shadowed"></div>
+                </div>
+                <div id="container-buttons"></div>
+            </div>
+        </section>
+        <section id="finish" class="hidden">
+            <div id="burgerContainer2"></div>
+                <div id="scoreLabel" class="label burgerRight"></div>
+            <button id="replay" class="finishButton burgerRight">REJOUER</button>
+            <button id="fk" class="finishButton burgerRight">FUCK</button>
+        </section>
+        <section id="bye" class="hidden">
+            <div id="byeMsg" class="label"></div>
+        </section>
+    </main>
+    <footer>
+        Made by Paname Quiz
+    </footer>
+    <script type="module" src="welcome.js"></script>
+</body>
+
+</html>
