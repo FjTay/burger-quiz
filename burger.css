@@ -1,19 +1,30 @@
 /* //////////////////// BURGER, PICK AND LABEL FOR PSEUDO /////////////////////// */
 #pick {
-    height: 50%;
+    height: 70%;
     max-height: 200px;
     width: 0.3rem;
     background: rgb(231, 231, 139);
     -ms-transform: rotate(20deg);
     transform: rotate(20deg);
-    animation: pickMove calc(var(--animationRate) * 2) 1;
+}
+
+.pickHiddenTop {
+    /* animation: pickMove calc(var(--animationRate) * 2) 1; */
+    top: -100vh;
+    transition: all var(--animationRate);
     position: relative;
-    top: 7vh;
+}
+
+.pickFalling {
+    /* animation: pickMove calc(var(--animationRate) * 2) 1; */
+    top: 5%;
+    transition: all var(--animationRate);
+    position: relative;
 }
 
 #burgerContainer, #burgerContainer2 {
     width: 100vw;
-    height: auto;
+    height: 100%;
 }
 
 .label {
@@ -89,7 +100,7 @@ input {
     }
 
     to {
-        top: 5vh;
+        top: 10vh;
     }
 }
 

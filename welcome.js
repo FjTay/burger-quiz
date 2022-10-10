@@ -120,10 +120,20 @@ const burger = {
 
 /////////////// part regrouping functions dedicated to the course of the quizz /////////////////
 
-const introStarts = (callBack) => {
+const cookiesRemove = () => {
     toggleClass(["#welcome", "unShadowed", false], 0)
+    toggleClass(["#cookies", "hidden", false], 0)
+    toggleClass(["#cookies", "shadowed", false], 0)
+    giveEventListener([".quizzButton", "click", () => introStarts(checkName)], 0)
+}
+
+const introStarts = (callBack) => {
+    toggleClass(["#cookies", "shadowed", false], 0)
+    toggleClass(["#cookies", "hidden", false], gameFrame.CSSanimRate)
     createBurger([burger, 'burgerContainer'])
     toggleClass(['.burger', 'centered', true], 100)
+    toggleClass(['#pick', 'pickHiddenTop', false], 100 * queryElems('.burger').length)
+    toggleClass(['#pick', 'pickFalling', false], 100 * queryElems('.burger').length)
     setTimeout(() =>  callBack(), 700 + (100 * queryElems('.burger').length))
 }
 
@@ -261,8 +271,7 @@ const reinitGameParams = () => {
 }
 
 const scoreDisplay = (score) => {
-    const scoreLabel = document.querySelector("#scoreLabel")
-    scoreLabel.innerHTML = gameFrame.finishSentences[Math.ceil(score / 2)]
+    giveTextContent('scoreLabel', gameFrame.finishSentences[Math.ceil(score / 2)])
 }
 
 const bye = () => {
@@ -279,4 +288,5 @@ const bye = () => {
     ]], false)
 }
 
-introStarts(checkName)
+// introStarts(checkName)
+cookiesRemove()

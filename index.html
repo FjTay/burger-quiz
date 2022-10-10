@@ -23,14 +23,22 @@
 
     <main>
         <section id="welcome">
-            <div id="pick">
-                <div id="pseudoLabel" class="label">
-                    <label>Tape ton pseudo...</label>
-                    <input placeholder="...ici">
+            <div id="burgerContainer">
+                <div id="pick" class="pickHiddenTop">
+                    <div id="pseudoLabel" class="label">
+                        <label>Tape ton pseudo...</label>
+                        <input placeholder="...ici">
+                    </div>
                 </div>
             </div>
-            <div id="burgerContainer"></div>
             <div class="burger validatePseudo">...et après clique ici</div>
+            <div id="cookies" class="hidden shadowed">
+                <div class="cookies lightlyShadowed"></div>
+                <div class="cookies">
+                    <p>L'auteur de ce site n'ayant, à ce stade de sa formation, aucune idée de comment et pourquoi gérer les cookies, nous vous informons que nous nous asseyons sur vos préférences</p><p>Très cordialement</p>
+                    <button class="quizzButton" id="closeCookies">LA FERME</button>
+                </div>
+            </div>
         </section>
         <section id="ready" class="hidden">
             <div id="readyTop">

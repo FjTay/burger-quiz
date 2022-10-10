@@ -1,0 +1,36 @@
+body, h1 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .page{
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .hidden{
+    display: none;
+  }
+  
+  .visible{
+    display: block;
+  }
+  
+  #pseudo {
+    background: red;
+  }
+  
+  #game {
+    background: green;
+  }
+  
+  #finish {
+   background: lightblue;
+  }
+
+  .questionFrame {
+    width: 80vw;
+    margin: auto;
+    height: 10vh;
+    background: lightsalmon;
+  }

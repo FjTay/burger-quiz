@@ -16,7 +16,6 @@
 }
 
 body {
-    /* background: purple; */
     background: var(--mainBackGround);
     margin: 0;
     padding: 0;
@@ -32,14 +31,12 @@ body {
 }
 
 main {
-    /* background: lightseagreen; */
     width: 100vw;
     height: calc(100vh - var(--heightSize) * 5);
     min-height: 30rem;
 }
 
 header {
-    /* background: red; */
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -60,7 +57,6 @@ section, header{
 
 section {
     height : 100%;
-    /* background: lightgreen; */
 }
 
 label,
@@ -71,7 +67,6 @@ input {
 }
 
 footer {
-    /* background: red; */
     margin-top: var(--heightSize);
     display: flex;
     justify-content: flex-end;
@@ -115,14 +110,31 @@ section,
 #breadBottom,
 .validatePseudo,
 #readyLabel,
-#pseudoLabel, #fk, #quizz-container, #scoreLabel, #byeMsg{
+#pseudoLabel, #fk, #quizz-container, #scoreLabel, #byeMsg, .cookies{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-/* ///////////////////////////// Welcome part ///////////////////// */
+/* ///////////////////////////// WELCOME PART ///////////////////// */
 
+#cookies{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    bottom: 0;
+}
+
+.cookies {
+    width: 100%;
+    height: 50%;
+    background: black;
+    color: var(--plasticWhite);
+}
+
+.cookies p {
+    width: 80%;
+}
 /* ///////////////////////// READY SECTION ///////////////////////// */
 #game {
     width: 100%;
@@ -142,12 +154,10 @@ section,
 }
 
 #readyTop {
-    /* background: cyan; */
     align-items: flex-end;
 }
 
 #readyBottom {
-    /* background: lightpink; */
     align-items: flex-start;
 }
 
@@ -182,7 +192,7 @@ section,
 }
 
 .readyButton:nth-child(3)::before{
-    content: "赫级"
+    content: "??"
 }
 
 /* //////////////// CLASSES RELATIVE TO THE GAME PART ///////////////// */
@@ -204,19 +214,13 @@ section,
     color: var(--plasticWhite);
 }
 
-#container-question {
-    /* background: cyan; */
-}
-
 #container-buttons {
-    /* background: lightpink; */
     margin-top: calc(var(--heightSize) * 1.5);
 }
 
 .quizzButton, #replay, #fk {
     width: 80%;
     height: calc(var(--heightSize) * 3.5);
-    /* background: lightgreen; */
     border-radius: 1rem;
     margin-bottom : 7px;
     transition: all var(--animationRate);
@@ -235,7 +239,6 @@ section,
 #score, #timer, #questionNbr {
     width: 50%;
     height: auto;
-    /* background: lightgreen; */
     border-radius: 1rem;
     margin-top: var(--heightSize);
 }
@@ -281,11 +284,12 @@ section,
 .hidden {
     display: none;
 }
-/* //////////////////////////// partie FINISH /////////////////// */
-#finish {
-    /* background: lightsalmon; */
-    /* opacity : 1; */
+
+.lightlyShadowed {
+    transition: all var(--animationRate);
+    opacity: 0.2;
 }
+/* //////////////////////////// partie FINISH /////////////////// */
 
 #replay, #fk {
     opacity: 1;
@@ -306,6 +310,10 @@ section,
 }
 
 @media (orientation: landscape) {
+    #closeCookies{
+        width : 20%;
+    }
+    
     #container-buttons {
         display: grid;
         grid-template-columns: 1fr 1fr;
