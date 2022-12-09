@@ -185,7 +185,7 @@ const gameStarts = (counter) => {
         [undefined, toggleClass, ["#questionitSelf", "shadowed", false], 0, 0],
         [undefined, toggleClass, [".quizzButton", "unShadowed", false], 0, 100]
     ]], false)
-    let timer = counter + gameFrame.gameNbr === 0 ? 13 : 10
+    let timer = counter + gameFrame.gameNbr === 0 ? 23 : 20
     gameFrame.interval = setInterval(() => {
         document.getElementById("timer").innerHTML = timer
         timer --
